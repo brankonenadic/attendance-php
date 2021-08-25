@@ -53,7 +53,7 @@
 
         public function getUserbyUsername($username){
             try{
-                $sql = "select count(*) as num from users where username = :username";
+                $sql = "SELECT count(*) as num from users where username = :username";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':username',$username);
                 
